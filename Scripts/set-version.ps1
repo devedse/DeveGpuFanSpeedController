@@ -5,7 +5,7 @@ $PSScriptFilePath = (Get-Item $MyInvocation.MyCommand.Path).FullName
 $ScriptDir = Split-Path -Path $PSScriptFilePath -Parent
 $SolutionRoot = Split-Path -Path $ScriptDir -Parent
 
-$assemblyInfoPath = Join-Path $SolutionRoot 'DeveImageOptimizerWPF\Properties\AssemblyInfo.cs' -Resolve
+$assemblyInfoPath = Join-Path $SolutionRoot 'DeveGpuFanSpeedController\Properties\AssemblyInfo.cs' -Resolve
 $re1 = [regex]"(?<=\[assembly: AssemblyVersion\(`")1.0.0.0(?=`")"
 $re2 = [regex]"(?<=\[assembly: AssemblyFileVersion\(`")1.0.0.0(?=`")"
 #$re = [regex]"(?<=<Version>).*(?=<\/Version>)"
