@@ -15,3 +15,6 @@ Run DeveGpuFanSpeedController.exe with the following arguments
 |:--:|:--:|:--:|:--:|
 | 1 | 0-100 or AUTO | The desired fan speed | Required |
 | 2 | Name of the process (E.g. mspaint) without .exe | The tool will keep the fan speed at the desired number and revert back to normal when the provided process ends | Optional |
+
+Example (Will set the GPU fan speed to 100 while EthDcrMiner64.exe is running):
+DeveGpuFanSpeedController.exe 100 EthDcrMiner64
