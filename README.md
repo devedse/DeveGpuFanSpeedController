@@ -9,7 +9,7 @@ This project is made to control your Gpu fan speed by command line. (E.g. for bi
 
 ## Instructions
 
-Run DeveGpuFanSpeedController.exe with the following arguments
+Make sure MSI Afterburner is running, then run DeveGpuFanSpeedController.exe with the following arguments
 
 | Argument Position | Values | Argument Description | Optional |
 |:--:|:--:|:--:|:--:|
