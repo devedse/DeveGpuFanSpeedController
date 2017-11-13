@@ -5,7 +5,7 @@ This project is made to control your Gpu fan speed by command line. (E.g. for bi
 
 | AppVeyor (Windows build) |
 |:------------------------:|
-| [![Build status][![Build status](https://ci.appveyor.com/api/projects/status/8fo1i7jl7xmq2qo1?svg=true)](https://ci.appveyor.com/project/devedse/devegpufanspeedcontroller) |
+| [![Build status](https://ci.appveyor.com/api/projects/status/8fo1i7jl7xmq2qo1?svg=true)](https://ci.appveyor.com/project/devedse/devegpufanspeedcontroller) |
 
 ## Instructions
 
