@@ -19,3 +19,12 @@ Make sure MSI Afterburner is running, then run DeveGpuFanSpeedController.exe wit
 Example (Will set the GPU fan speed to 100 while EthDcrMiner64.exe is running):
 
 DeveGpuFanSpeedController.exe 100 EthDcrMiner64
+
+## How it works
+
+Basically I make use of the amazing library written by Nick on the Guru3D forums:
+https://forums.guru3d.com/threads/msi-afterburner-net-class-library.339656/
+
+## Donations
+
+Ethereum: 0x0776C3770f2199edD7F214B18D602045ba295010
