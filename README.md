@@ -22,7 +22,8 @@ DeveGpuFanSpeedController.exe 100 EthDcrMiner64
 
 ## How it works
 
-Basically I make use of the amazing library written by Nick on the Guru3D forums:
+Basically I make use of the amazing library written by Nick (stangowner) on the Guru3D forums:
+
 https://forums.guru3d.com/threads/msi-afterburner-net-class-library.339656/
 
 ## Donations
