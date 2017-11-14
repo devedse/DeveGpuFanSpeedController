@@ -31,14 +31,19 @@ namespace DeveGpuFanSpeedController
                 SetFanSpeed(args.First());
 
                 var processName = args[1];
-                Console.WriteLine($"Waiting for process {processName} to exit.");
 
                 int maxWaitForProcessStart = 10;
-                while (!Process.GetProcessesByName(processName).Any() && maxWaitForProcessStart >= 0)
+                bool processStarted = false;
+                while (!(processStarted = Process.GetProcessesByName(processName).Any()) && maxWaitForProcessStart > 0)
                 {
                     Thread.Sleep(1000);
                     maxWaitForProcessStart--;
                     Console.WriteLine($"Waiting for process {processName} to start... Seconds remaining: {maxWaitForProcessStart}");
+                }
+
+                if (processStarted)
+                {
+                    Console.WriteLine($"Process {processName} is running. Waiting for it to exit...");
                 }
 
                 while (Process.GetProcessesByName(processName).Any())
