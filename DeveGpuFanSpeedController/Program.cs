@@ -96,7 +96,7 @@ namespace DeveGpuFanSpeedController
                     DisplayError();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Console.WriteLine($"Error while setting fan value.");
                 throw;
