@@ -10,6 +10,18 @@ namespace DeveGpuFanSpeedController
     {
         static void Main(string[] args)
         {
+            try
+            {
+                Gogo(args);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occured: {ex}");
+            }
+        }
+
+        public static void Gogo(string[] args)
+        {
             if (args.Length == 1)
             {
                 SetFanSpeed(args.First());
@@ -20,6 +32,14 @@ namespace DeveGpuFanSpeedController
 
                 var processName = args[1];
                 Console.WriteLine($"Waiting for process {processName} to exit.");
+
+                int maxWaitForProcessStart = 10;
+                while (!Process.GetProcessesByName(processName).Any() && maxWaitForProcessStart >= 0)
+                {
+                    Thread.Sleep(1000);
+                    maxWaitForProcessStart--;
+                    Console.WriteLine($"Waiting for process {processName} to start... Seconds remaining: {maxWaitForProcessStart}");
+                }
 
                 while (Process.GetProcessesByName(processName).Any())
                 {
@@ -73,7 +93,8 @@ namespace DeveGpuFanSpeedController
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error while setting fan value: {ex}");
+                Console.WriteLine($"Error while setting fan value.");
+                throw;
             }
         }
 
